@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.banner .content .title {
+  font-family: "Hallowed Grounds";
+  font-size: 9em;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  /* Covers the bg with the ink img or gif */
+  mask-image: url(ink_lv2.gif);
+  mask-size: cover;
+  mask-position: center;
+}
